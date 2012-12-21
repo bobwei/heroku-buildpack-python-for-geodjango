@@ -289,3 +289,9 @@ if [ ! -d $CACHE_DIR/gdal ]; then
   rm gdal-1.8.1-heroku.tar.gz
   echo "GDAL installed" | indent
 fi
+
+# Create set-aside .geodjango folder and copy compiled files
+mkdir -p .geodjango
+cp -R $CACHE_DIR/geos .geodjango
+cp -R $CACHE_DIR/proj4 .geodjango
+cp -R $CACHE_DIR/gdal .geodjango
