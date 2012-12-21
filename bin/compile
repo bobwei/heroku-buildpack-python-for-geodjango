@@ -259,3 +259,5 @@ GEOS_VENDOR="vendor/geos"
 
 mkdir -p $1/$GEOS_VENDOR
 curl $GEOS_BINARY -o - | tar -xz -C $1/$GEOS_VENDOR -f -
+
+echo $1/$GEOS_VENDOR
